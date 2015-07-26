@@ -16,7 +16,7 @@ readDataIntoEnvironment <- function() {
 ##
 
 constructPlot3 <- function(xres=xresDefault, yres=yresDefault) {
-	# Piece together the two things we care about
+	# Piece together the four things we care about
 	NEIByYear <- as.data.frame(cbind(NEI$year, NEI$fips, NEI$type, NEI$Emissions))
 	colnames(NEIByYear) <- c("year", "fips", "type", "Emissions")
 
