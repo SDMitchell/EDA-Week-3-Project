@@ -40,7 +40,6 @@ constructPlot4 <- function(xres=xresDefault, yres=yresDefault) {
 		scale_y_continuous(limits = c(0, 10), expand=c(0,0)) +
 		labs(x = "Year", y = "Total Emissions (in megatons)", title="Extractive Industry Yearly Emissions Total") +
 		theme(panel.background = element_rect(fill = "#FFFAF0", colour = "#000000"), plot.background = element_rect(fill = "#FFFAF0", colour = "#000000"), panel.grid.major = element_line(colour="#FFDEAD"))
-	print(g)
 
 	# Print it out
 	png(filename="plot4.png", width=xres, height=yres, type="cairo")
