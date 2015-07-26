@@ -32,7 +32,7 @@ constructPlot5 <- function(xres=xresDefault, yres=yresDefault) {
 	molten$value <- as.numeric(molten$value)
 	dataOnRoad <- dcast(molten, year+fips~variable, sum)
 
-	dataOnRoadBaltimoreCity <- dataOnRoad[dataOnRoad$fips == 24510, ]
+	dataOnRoadBaltimoreCity <- dataOnRoad[dataOnRoad$fips == "24510", ]
 
 	# Construct our plot object
 	g <- ggplot(dataOnRoadBaltimoreCity, aes(as.numeric(years), Emissions, group=1))

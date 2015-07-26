@@ -26,7 +26,7 @@ constructPlot2 <- function(xres=xresDefault, yres=yresDefault) {
 	molten <- melt(NEIByYear, id.vars=c(1,2))
 	molten$value <- as.numeric(molten$value)
 	frozen <- dcast(molten, year+fips~variable, sum)
-	dataBaltimoreCity <- frozen[frozen$fips==24510, ]
+	dataBaltimoreCity <- frozen[frozen$fips == "24510", ]
 
 	png(filename="plot2.png", width=xres, height=yres, type="cairo")
 

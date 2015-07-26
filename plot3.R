@@ -30,7 +30,7 @@ constructPlot3 <- function(xres=xresDefault, yres=yresDefault) {
 	frozen <- dcast(molten, year+fips+type~variable, sum)
 
 	# Just select Baltimore City
-	dataBaltimoreCity <- frozen[frozen$fips==24510, ]
+	dataBaltimoreCity <- frozen[frozen$fips == "24510", ]
 
 	# Construct our plot object
 	g <- ggplot(dataBaltimoreCity, aes(year, Emissions))
